@@ -1,0 +1,176 @@
+1
+00:00:00,100 --> 00:00:02,526
+Welcome to CogniStream.
+
+2
+00:00:02,527 --> 00:00:07,978
+In this short lesson, we will build an easy mental picture of a neural network.
+
+3
+00:00:07,979 --> 00:00:13,855
+A neural network learns a relationship between inputs and outputs from examples.
+
+4
+00:00:13,856 --> 00:00:20,292
+Imagine that our input is the number of hours a student studied, and our output is a test score.
+
+5
+00:00:20,293 --> 00:00:24,573
+We show the network many examples so it can learn a pattern.
+
+6
+00:00:24,574 --> 00:00:29,560
+Later, it uses that pattern to estimate a score for a new input.
+
+7
+00:00:29,561 --> 00:00:34,029
+Remember, a prediction is an estimate, not a guarantee.
+
+8
+00:00:35,517 --> 00:00:42,450
+A network has three main parts: an input layer, one or more hidden layers, and an output layer.
+
+9
+00:00:42,451 --> 00:00:46,240
+The input layer receives the values we provide.
+
+10
+00:00:46,241 --> 00:00:50,349
+Hidden layers transform these values step by step.
+
+11
+00:00:50,350 --> 00:00:53,620
+The output layer returns the prediction.
+
+12
+00:00:53,621 --> 00:01:00,868
+In the study-hours example, the input could be four hours, and the output could be an estimated score.
+
+13
+00:01:00,869 --> 00:01:05,070
+The connections between layers contain adjustable numbers.
+
+14
+00:01:05,071 --> 00:01:11,427
+During training, those numbers are changed so the network can produce more useful predictions.
+
+15
+00:01:12,889 --> 00:01:15,407
+Let us look at one neuron.
+
+16
+00:01:15,408 --> 00:01:19,623
+A weight controls how strongly an input influences it.
+
+17
+00:01:19,624 --> 00:01:26,857
+For a simple neuron with one input, we first multiply the input by its weight, then add a bias.
+
+18
+00:01:26,858 --> 00:01:31,830
+Suppose the input is three, the weight is two, and the bias is one.
+
+19
+00:01:31,831 --> 00:01:37,070
+The combined value is two times three plus one, which equals seven.
+
+20
+00:01:37,071 --> 00:01:40,793
+The neuron then applies an activation function.
+
+21
+00:01:40,794 --> 00:01:48,213
+For example, the ReLU activation keeps positive values and changes negative values to zero.
+
+22
+00:01:48,214 --> 00:01:51,964
+So ReLU applied to seven is still seven.
+
+23
+00:01:53,429 --> 00:01:57,330
+How does the network know whether its prediction was useful?
+
+24
+00:01:57,331 --> 00:01:59,711
+We use a loss function.
+
+25
+00:01:59,712 --> 00:02:04,604
+Loss measures the difference between the prediction and the expected answer.
+
+26
+00:02:04,605 --> 00:02:07,437
+One example is squared error.
+
+27
+00:02:07,438 --> 00:02:14,099
+If the network predicts a score of seventy, but the true score is eighty, the difference is minus ten.
+
+28
+00:02:14,100 --> 00:02:17,450
+Squaring minus ten gives one hundred.
+
+29
+00:02:17,451 --> 00:02:20,761
+That is the squared error for this example.
+
+30
+00:02:20,762 --> 00:02:25,602
+When the prediction exactly matches the target, this loss is zero.
+
+31
+00:02:25,603 --> 00:02:30,709
+During training, we aim to reduce the loss across many examples.
+
+32
+00:02:32,179 --> 00:02:36,852
+Once we have calculated the loss, we need to improve the network.
+
+33
+00:02:36,853 --> 00:02:43,487
+Backpropagation calculates gradients, which tell us how changes in each weight affect the loss.
+
+34
+00:02:43,488 --> 00:02:50,522
+Gradient descent then uses those gradients to update the weights in a direction intended to reduce the loss.
+
+35
+00:02:50,523 --> 00:02:54,205
+The learning rate controls the size of each update.
+
+36
+00:02:54,206 --> 00:03:00,096
+A very large update can overshoot, while a very small update may learn slowly.
+
+37
+00:03:00,097 --> 00:03:07,930
+Training repeats this loop: make a prediction, calculate the loss, calculate gradients, and update the weights.
+
+38
+00:03:09,383 --> 00:03:14,215
+Finally, we need to check whether the network learned a useful pattern.
+
+39
+00:03:14,216 --> 00:03:17,832
+Training examples are used to adjust the weights.
+
+40
+00:03:17,833 --> 00:03:22,500
+Evaluation examples are kept separate from those updates.
+
+41
+00:03:22,501 --> 00:03:29,175
+If a network only memorises the training examples, it may perform poorly on new examples.
+
+42
+00:03:29,176 --> 00:03:36,795
+Evaluation helps us check generalisation: how well the learned pattern works beyond the data used for training.
+
+43
+00:03:36,796 --> 00:03:46,303
+To recap, a network transforms inputs into predictions, measures error with a loss function, and learns through repeated weight updates.
+
+44
+00:03:46,304 --> 00:03:49,256
+Thank you for learning with CogniStream.
+

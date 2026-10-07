@@ -1,0 +1,26 @@
+UPDATE YOUR EXISTING WINDOWS INSTALLATION TO v0.2
+
+1. In your running backend terminal, press Ctrl+C to stop the old app.
+2. Download the updated CogniStream_Review2.zip and Extract All to a NEW folder.
+3. Open the NEW extracted cognistream folder. Copy everything inside it.
+4. Paste into your EXISTING cognistream folder and choose Replace files
+   when Windows asks. Merge the backend and frontend folders.
+   Do not delete your existing backend\.venv or backend\.env.
+   Neither file is included in this update, so normal copy-and-replace preserves them.
+5. Open your existing backend folder. In File Explorer's address bar type cmd
+   and press Enter. Run:
+
+   .venv\Scripts\python.exe -m uvicorn main:app --host 127.0.0.1 --port 8000
+
+6. Open http://127.0.0.1:8000 in Chrome and press Ctrl+F5 to refresh.
+7. You should see the green sidebar, light interface, and the narrated
+   'Neural networks, made simple' lesson with 6 chapters and 44 captions.
+
+No new Python dependencies or npm install are required for this prebuilt update.
+Keep the terminal open while using the app.
+
+IF YOU EDIT THE FRONTEND SOURCE LATER
+Stop any old frontend terminal. In the frontend folder run npm ci,
+then from cognistream run node scripts\prepare_assets.mjs.
+Use npm run build --prefix frontend and restart Python to serve your edits.
+The updated package pins the patched Vite 7.3.7 development dependency.

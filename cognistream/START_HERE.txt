@@ -1,0 +1,36 @@
+COGNISTREAM v0.2 - WINDOWS QUICK START
+
+ALREADY INSTALLED THE PREVIOUS VERSION?
+Read UPGRADE_WINDOWS.txt first. Keep your existing .venv and .env.
+
+FIRST INSTALL - ONLY PYTHON IS NEEDED TO RUN THE INCLUDED APP
+1. Extract the complete ZIP with right-click > Extract All.
+2. Open the extracted cognistream folder, then open its backend folder.
+3. Click File Explorer's address bar at the top, type cmd and press Enter.
+4. Run these commands one at a time:
+
+   python -m venv .venv
+   .venv\Scripts\python.exe -m pip install -r requirements.txt
+   copy .env.example .env
+   .venv\Scripts\python.exe -m uvicorn main:app --host 127.0.0.1 --port 8000
+
+5. Keep this terminal open. Open http://127.0.0.1:8000 in Chrome.
+6. Select Play lesson. The sample has English narration, captions and chapters.
+7. Camera is optional. Select Enable camera, allow it, and stay relaxed for five seconds.
+8. With the lecture playing, sustained brow/squint cues above the threshold
+   for three seconds can trigger learning support. Adjust sensitivity if needed.
+9. Read the source-labelled explanation, try the self-check, and Resume lecture.
+10. Read docs/PRESENTATION_NOTES.md before your review.
+
+NEXT TIME: open cmd in backend and run only the final uvicorn command.
+STOP: press Ctrl+C in that terminal.
+
+If Windows blocks a .bat file, use the manual commands above.
+You do not need to disable Smart App Control to follow these instructions.
+Node.js is needed only to edit/rebuild the React source, not to run this prebuilt UI.
+
+Prepared sample explanations work without a Gemini key. To enable live Gemini,
+add your key to backend\.env and restart the Python server. Keep the key private.
+
+Facial cues are experimental, not proof of confusion. The Review demo tab has
+an explicitly labelled simulation; present it as a simulation.

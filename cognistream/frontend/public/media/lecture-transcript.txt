@@ -1,0 +1,17 @@
+Learning from examples
+Welcome to CogniStream. In this short lesson, we will build an easy mental picture of a neural network. A neural network learns a relationship between inputs and outputs from examples. Imagine that our input is the number of hours a student studied, and our output is a test score. We show the network many examples so it can learn a pattern. Later, it uses that pattern to estimate a score for a new input. Remember, a prediction is an estimate, not a guarantee.
+
+Inside the network
+A network has three main parts: an input layer, one or more hidden layers, and an output layer. The input layer receives the values we provide. Hidden layers transform these values step by step. The output layer returns the prediction. In the study-hours example, the input could be four hours, and the output could be an estimated score. The connections between layers contain adjustable numbers. During training, those numbers are changed so the network can produce more useful predictions.
+
+Weights and activation
+Let us look at one neuron. A weight controls how strongly an input influences it. For a simple neuron with one input, we first multiply the input by its weight, then add a bias. Suppose the input is three, the weight is two, and the bias is one. The combined value is two times three plus one, which equals seven. The neuron then applies an activation function. For example, the ReLU activation keeps positive values and changes negative values to zero. So ReLU applied to seven is still seven.
+
+Measuring the error
+How does the network know whether its prediction was useful? We use a loss function. Loss measures the difference between the prediction and the expected answer. One example is squared error. If the network predicts a score of seventy, but the true score is eighty, the difference is minus ten. Squaring minus ten gives one hundred. That is the squared error for this example. When the prediction exactly matches the target, this loss is zero. During training, we aim to reduce the loss across many examples.
+
+Learning from feedback
+Once we have calculated the loss, we need to improve the network. Backpropagation calculates gradients, which tell us how changes in each weight affect the loss. Gradient descent then uses those gradients to update the weights in a direction intended to reduce the loss. The learning rate controls the size of each update. A very large update can overshoot, while a very small update may learn slowly. Training repeats this loop: make a prediction, calculate the loss, calculate gradients, and update the weights.
+
+Testing what we learned
+Finally, we need to check whether the network learned a useful pattern. Training examples are used to adjust the weights. Evaluation examples are kept separate from those updates. If a network only memorises the training examples, it may perform poorly on new examples. Evaluation helps us check generalisation: how well the learned pattern works beyond the data used for training. To recap, a network transforms inputs into predictions, measures error with a loss function, and learns through repeated weight updates. Thank you for learning with CogniStream.

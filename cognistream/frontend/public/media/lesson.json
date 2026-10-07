@@ -1,0 +1,101 @@
+{
+  "id": "demo",
+  "version": 2,
+  "title": "Neural networks, made simple",
+  "description": "A narrated introduction to inputs, layers, weights, loss, and learning.",
+  "narration": "Synthetic English narration",
+  "duration": 230.658,
+  "chapters": [
+    {
+      "title": "Learning from examples",
+      "subtitle": "A pattern, not a promise",
+      "start": 0,
+      "end": 35.417,
+      "explanation": "A neural network learns a pattern from examples. It uses that pattern to estimate an output for a new input. Study hours are the input and a predicted score is the output.",
+      "analogy": "Think of noticing a pattern in practice results. Past examples help you make an estimate, but the next result can still be different.",
+      "check_question": "In this example, what is the input?",
+      "check_options": [
+        "Hours studied",
+        "The predicted score",
+        "The training loss"
+      ],
+      "check_answer": 0
+    },
+    {
+      "title": "Inside the network",
+      "subtitle": "Input → hidden layers → output",
+      "start": 35.417,
+      "end": 72.789,
+      "explanation": "The input layer receives values. Hidden layers transform them, and the output layer returns a prediction. Training adjusts the numbers on the connections.",
+      "analogy": "A small assembly line passes a result from one stage to the next. Each stage transforms what it receives.",
+      "check_question": "Which part returns the prediction?",
+      "check_options": [
+        "The input layer",
+        "The output layer",
+        "The subtitle file"
+      ],
+      "check_answer": 1
+    },
+    {
+      "title": "Weights and activation",
+      "subtitle": "How a neuron combines information",
+      "start": 72.789,
+      "end": 113.329,
+      "explanation": "A neuron combines weighted inputs and a bias, then applies an activation function. For input 3, weight 2, and bias 1, the combined value is 7. ReLU keeps that positive value.",
+      "analogy": "A weight acts like a volume control for an input, changing how strongly that input contributes.",
+      "check_question": "What is 2 × 3 + 1, before activation?",
+      "check_options": [
+        "5",
+        "6",
+        "7"
+      ],
+      "check_answer": 2
+    },
+    {
+      "title": "Measuring the error",
+      "subtitle": "Loss tells us how far we missed",
+      "start": 113.329,
+      "end": 152.079,
+      "explanation": "Loss measures prediction error. For prediction 70 and target 80, squared error is (70 − 80)² = 100. If they match, squared error is zero.",
+      "analogy": "Loss is like measuring how far a dart landed from the target. A smaller miss is better for that example.",
+      "check_question": "What is squared error when prediction equals target?",
+      "check_options": [
+        "Zero",
+        "Always one hundred",
+        "The number of layers"
+      ],
+      "check_answer": 0
+    },
+    {
+      "title": "Learning from feedback",
+      "subtitle": "Backpropagation and gradient descent",
+      "start": 152.079,
+      "end": 189.283,
+      "explanation": "Backpropagation calculates how weights affect the loss. Gradient descent uses that information to update weights. The learning rate controls update size.",
+      "analogy": "Like adjusting a recipe after tasting it, training uses feedback to decide which settings to change and how much.",
+      "check_question": "What controls the size of a weight update?",
+      "check_options": [
+        "The video speed",
+        "The learning rate",
+        "The camera resolution"
+      ],
+      "check_answer": 1
+    },
+    {
+      "title": "Testing what we learned",
+      "subtitle": "New examples reveal generalisation",
+      "start": 189.283,
+      "end": 230.616,
+      "explanation": "Training changes weights using training examples. Evaluation uses separate examples that were not used for those updates. This checks generalisation beyond memorised data.",
+      "analogy": "Working through solved questions is like training. Answering new questions without solutions is like evaluation.",
+      "check_question": "Why keep evaluation examples separate?",
+      "check_options": [
+        "To make the video longer",
+        "To remove every possible error",
+        "To check performance on new examples"
+      ],
+      "check_answer": 2
+    }
+  ],
+  "cue_count": 44
+}
